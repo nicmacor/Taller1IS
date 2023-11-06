@@ -5,21 +5,27 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/x
   <groupId>com.espol.edu</groupId>
   <artifactId>tallerCheck</artifactId>
   <version>1.0.0</version>
+  <description>Software Engineering II</description>
 
-<build>
+ <build>
  	<plugins>
-<plugin>
- 		<groupId>org.apache.maven.plugins</groupId>
- 		<artifactId>maven-site-plugin</artifactId>
- 		<version>3.7.1</version>
-	</plugin>
- 	<plugin>
- 		<groupId>org.apache.maven.plugins</groupId>
- 		<artifactId>maven-project-info-reports-plugin</artifactId>
- 		<version>3.0.0</version>
- 	</plugin>
- 	</plugins>
-</build>
+		 <plugin>
+			 <groupId>org.apache.maven.plugins</groupId>
+			 <artifactId>maven-site-plugin</artifactId>
+			 <version>3.7.1</version>
+		</plugin>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-project-info-reports-plugin</artifactId>
+			<version>3.0.0</version>
+		</plugin>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-pmd-plugin</artifactId>
+			<version>3.13.0</version>
+		</plugin>
+	</plugins>
+ </build>
    <reporting>
       <plugins>
         <plugin>
@@ -34,6 +40,16 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/x
             </reportSet>
           </reportSets>
         </plugin>
+        <plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-pmd-plugin</artifactId>
+			<version>3.13.0</version>
+			<configuration>
+				<rulesets>
+					<ruleset>nicolas_ruleset.xml</ruleset>
+				</rulesets>
+			</configuration>
+		</plugin>
       </plugins>
     </reporting>
 </project>
