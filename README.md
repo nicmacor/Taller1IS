@@ -1,2 +1,2 @@
-# Taller1IS
-Implementacion Vacation Cost Estimator
+# Taller2IS Challenge
+Implementacion Vacation Cost Estimator With additional requierements
